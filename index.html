@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Xingyu Chen — Undergraduate Researcher in CS & AI4S.">
+  <title>Xingyu Chen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#home">Xingyu Chen</a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#research">Research</a>
+        <a href="#leadership">Leadership &amp; Life</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-button" href="assets/CV_Xingyu-Chen.pdf" download>Download CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">Undergraduate Researcher in CS &amp; AI4S</p>
+        <h1>Xingyu Chen</h1>
+        <p class="status">Actively seeking Ph.D. opportunities for Fall 2027 in CS &amp; AI for Science.</p>
+      </div>
+    </section>
+
+    <section class="section about" aria-labelledby="about-title">
+      <div class="section-label">01</div>
+      <div class="section-content">
+        <div class="about-layout">
+          <figure class="portrait"><img src="assets/portrait.jpg" alt="Xingyu Chen" fetchpriority="high"></figure>
+          <div>
+            <h2 id="about-title">About Me</h2>
+            <p class="lead">I am a senior Artificial Intelligence major at the University of Chinese Academy of Sciences (Expected Jun 2027) and previously a visiting student in Data Science at UC Berkeley. My research is driven by one core question: How can we design principled machine learning models that truly master complex, real-world systems? I focus on advancing core computer science—specifically sequence modeling, NLP, and representation learning—to build scalable algorithms with robust generalization. Building on these computational foundations, I bridge methodology with domain knowledge to push the boundaries of AI for Science, developing biology-informed methods to understand and engineer complex biophysical and multi-omics systems.</p>
+            <div class="publications">
+              <h3>Publications</h3>
+              <p>Wang, L., Liu, Z., Tang, X., <strong>Chen, X.</strong> <em>et al</em>. FoldNav: Protein Structure Prediction as a Navigator for Masked Diffusion Protein Design. <em>Nat Mach Intell (Under Review)</em>.</p>
+            </div>
+            <div class="awards">
+              <h3>Honors &amp; Awards</h3>
+              <p><strong>Honorable Mention (Top 15%)</strong> — Mathematical Contest in Modeling (MCM), COMAP <span>May 2025</span></p>
+              <p><strong>Silver Award</strong> — International Genetically Engineered Machine Competition (iGEM) <span>Oct 2024</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section" aria-labelledby="research-title">
+      <div class="section-label">02</div>
+      <div class="section-content">
+        <h2 id="research-title">Research</h2>
+        <article class="project featured">
+          <div class="project-meta">UC Berkeley <span>May 2026 - Present</span></div>
+          <h3>Denoising Cellular Cryo-EM Images <em>(Ongoing Project)</em></h3>
+          <dl>
+            <div><dt>Motivation</dt><dd>Cryo-EM image processing suffers from extremely low signal-to-noise ratios (SNR), where 2D Template Matching (2DTM) frequently generates "fuzzy particles" that introduce high false-positive rates during particle picking.</dd></div>
+            <div><dt>Methodology</dt><dd>Developing a novel denoising and filtering framework that integrates domain-specific physical priors (e.g., angular consistency and defocus properties) with deep learning models. The goal is to enhance structural signals, lower false positives, and improve candidate selection for downstream 3D reconstruction.</dd></div>
+            <div><dt>Current Progress</dt><dd>Formulated the noise reduction framework and established data preprocessing pipelines with physical thresholding. Evaluating and benchmarking multiple denoising paradigms (e.g., self-supervised learning and diffusion models) under physical constraints to identify the optimal approach.</dd></div>
+          </dl>
+        </article>
+        <article class="project featured">
+          <div class="project-meta">Institute of Automation, Chinese Academy of Sciences <span>Jul 2026</span></div>
+          <h3>Protein Design via Structural Navigation</h3>
+          <figure class="project-figure"><img src="assets/ucas.jpeg" alt="Folding-Navigated Decoding workflow" loading="lazy"></figure>
+          <dl>
+            <div><dt>Motivation</dt><dd>Masked diffusion models struggle to guarantee real-time structural stability during protein design, often resulting in spatial clashes or motif collapse.</dd></div>
+            <div><dt>Methodology</dt><dd>Developed "Folding-Navigated Decoding", a training-free framework utilizing Protein Structure Predictors (PSPs) as active navigators, entirely executed independently on local institute computing resources. Implemented periodic structural confidence injection and rejection sampling based on pLDDT, steric clashes, and stereochemical priors. Designed a dynamic re-masking strategy targeting low-confidence non-motif sites to adaptively mitigate negative structural feedback.</dd></div>
+            <div><dt>Outcomes</dt><dd>Achieved 44.97% relative improvement in geometric quality, 3.56% in unconditional design foldability, and 18.18% in motif scaffolding pass rate.</dd></div>
+            <div><dt>Publication</dt><dd>FoldNav: Protein Structure Prediction as a Navigator for Masked Diffusion Protein Design — Co-author, Under Review at Nature Machine Intelligence.</dd></div>
+          </dl>
+        </article>
+        <article class="project featured">
+          <div class="project-meta">UCAS–SJTU Joint Research Exchange <span>Jul 2025 – Aug 2025</span></div>
+          <h3>Analysis of Gut Microbiota Homeostasis Using Large Static Models</h3>
+          <figure class="project-figure"><img src="assets/sjtu.jpeg" alt="Cross-species microbiota prediction workflow" loading="lazy"></figure>
+          <dl>
+            <div><dt>Motivation</dt><dd>Significant cross-species differences in gut microbiota hinder the direct transfer of drug efficacy evaluation models from murine subjects to humans.</dd></div>
+            <div><dt>Methodology</dt><dd>Migrated the PopPhy-CNN framework from TensorFlow to PyTorch, decoupling data loading and tree-graph convolution operations. Applied Graph Neural Networks (GNNs) to extract evolutionary topology features.</dd></div>
+            <div><dt>Outcomes</dt><dd>Validated that GNNs effectively bridge the species gap, enabling accurate cross-species drug efficacy prediction based on microbiota dynamics.</dd></div>
+          </dl>
+        </article>
+        <div class="project-grid">
+          <article class="project"><h3>Programmable Logic Framework Based on CRISPRi <em>(iGEM) [Silver Award]</em></h3><figure class="project-figure compact"><img src="assets/igem-final-circuit.webp" alt="Programmable CRISPRi circuit design" loading="lazy"></figure><p>Engineered programmable Boolean logic gates in E. coli using CRISPR interference (CRISPRi) and recombinase systems, validating 16 logic mappings for biomarker detection. Developed NLP-based circuit visualization tools and mathematical models to assess promoter stability.</p></article>
+          <article class="project"><h3>Prediction of Medal Outcomes for the Olympic Games <em>(COMAP) [Honorable Mention]</em></h3><figure class="project-figure compact"><img src="assets/mcm.png" alt="Olympic medal outcome prediction model" loading="lazy"></figure><p>Built an AFMP multivariate regression model to predict medal counts for 77 countries (accuracy &gt;60%). Applied 3D K-means clustering to analyze national performance trends and conducted Monte Carlo sensitivity analysis, verifying a 23.5% increase in host-country medal counts.</p></article>
+          <article class="project"><h3>Biological Interpretability in NIPT Modeling <em>(CSIAM)</em></h3><p>Prioritized clinical physiological interpretability in cffDNA concentration modeling. Selected Generalized Additive Models (GAM, R²=0.2176) over Random Forest, as GAM successfully captured stable physical trends and marginal effects consistent with clinical physiology (validated via 1000 Bootstrap pseudo-samplings).</p></article>
+          <article class="project"><h3>Continual Learning in Cognitive Tasks</h3><p>Addressed the plasticity-stability dilemma by building a Memory-Augmented neural network. Integrated EWC and HAT algorithms to simulate synaptic consolidation and brain region specialization, successfully elevating accuracy on sequential cognitive reasoning tasks from 52% to over 76% without catastrophic forgetting.</p></article>
+          <article class="project"><h3>M1 Motor Cortex Neural Signal Decoding</h3><p>Designed a band-pass filtering and wavelet denoising pipeline for multi-channel array electrode signals. Built Kalman filter and LSTM-based decoders to predict real-time 3D motion trajectories (R²=0.84) with system latency under 15ms.</p></article>
+          <article class="project"><h3>sEMG-based Hand Gesture Recognition System</h3><p>Utilized Delsys high-precision biosensors to collect multi-channel sEMG signals. Engineered a robust feature space across time and frequency domains (MAV, RMS, MNP) to combat muscle fatigue drift. Deployed a Hard Voting ensemble classifier (Random Forest, SVM, XGBoost), increasing gesture recognition accuracy from 57% to 87.5%.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership" class="section" aria-labelledby="leadership-title">
+      <div class="section-label">03</div>
+      <div class="section-content">
+        <h2 id="leadership-title">Leadership &amp; Life</h2>
+        <p class="lead">Beyond algorithms and wet labs, I am a competitive memory athlete, an active community builder, and an art enthusiast. Here is a glimpse into my life outside of research.</p>
+        <div class="life-gallery">
+          <figure><img src="assets/life-1.jpg" alt="Community experience" loading="lazy"></figure>
+          <figure><img src="assets/life-2.jpg" alt="Student leadership experience" loading="lazy"></figure>
+        </div>
+        <div class="life-list">
+          <article><h3>Competitions &amp; Early Aptitude</h3><p><strong>US Memory Master (2025) &amp; UK Memory Master (2024):</strong> Deeply passionate about competitive memory sports. The rigorous training in cognitive retention and pattern recognition has profoundly shaped my approach to data structuring and algorithmic logic.</p><p><strong>National High School Biology Olympiad:</strong> Awarded National 2nd Prize &amp; Provincial 1st Prize. This early intensive exposure to biological systems sparked my lasting interest in Biophysics and laid the foundation for my current AI4S research.</p></article>
+          <article><h3>Student Leadership</h3><p><strong>Media Operations Team, UCAS Journalist Troupe (2024 - 2026):</strong> Served for two years in media operations, bridging campus news with the student community. Awarded the highest "Grade A" evaluation for exceptional performance.</p><p><strong>Vice Minister, Life and Culture Dept. UCAS Student Union (2024 - 2025):</strong> Coordinated campus cultural events and student life initiatives, focusing on improving the daily well-being of the academic community.</p><p><strong>Class Monitor, Class 2304 (2023 - 2024):</strong> Led a class of exceptional students during our freshman year, fostering a collaborative and supportive academic environment.</p></article>
+          <article><h3>Arts &amp; Hobbies</h3><p><strong>Piano (Level 10) &amp; Latin Dance (Gold Star Level 1):</strong> I find balance and creativity through music and dance. Achieving Piano Level 10 and Latin Dance Gold Star Level 1 taught me discipline, rhythm, and the importance of continuous practice.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="section-label">04</div>
+      <div class="section-content">
+        <h2 id="contact-title">Contact</h2>
+        <p class="lead">Feel free to reach out for academic discussions or Ph.D. opportunities.</p>
+        <p class="email"><strong>Email</strong>: chenxingyu_angel@berkeley.edu | chenxingyu233@mails.ucas.ac.cn</p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
